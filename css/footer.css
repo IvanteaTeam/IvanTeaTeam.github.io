@@ -1,0 +1,35 @@
+footer{
+    background: var(--main-color);
+    padding: 20px;
+    margin-top: 200px;
+}
+footer *{
+    vertical-align: middle;
+}
+footer p{
+    color: var(--text-color);
+    font-family: 'Jura', sans-serif;
+    display: inline-block;
+    margin: 5px;
+}
+footer .vk-icon{
+    display: inline-block;
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+    background-image: url('../img/github.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+footer .vk-icon:hover{
+    
+    transform: scale(1.1);
+    
+}
+@media (orientation:portrait) , (max-width:750px){
+    footer {
+        margin-top: 10px;
+    }
+}

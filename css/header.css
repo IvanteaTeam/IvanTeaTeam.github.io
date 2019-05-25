@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&subset=cyrillic,cyrillic-ext,greek,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+
+
+:root{
+    --main-color: #000;
+    --text-color: #fff;
+}
+
+
+@keyframes Online{
+    0%{
+        left: 0px;
+    }
+    40%{
+        left: 0px;
+        top: 0px;
+    }
+    45%{
+        top: 60px;
+        left: 0px;
+    }
+    50%{
+        top: 60px;
+        left: 150px;
+    }
+    55%{
+        top: 60px;
+        left: 300px;
+    }
+    60%{
+        top: 0px;
+        left: 300px;
+    }
+    
+    100%{
+        left: 300px;
+    }
+}
+@keyframes Pong{
+    0%{
+        left: 0px;
+    }
+    40%{
+        top: 0px;
+        left: 0px;
+    }
+    45%{
+        top: -60px;
+        left: 0px;
+    }
+    50%{
+        top: -60px;
+        left: -200px;
+    }
+    55%{
+        top: -60px;
+        left: -400px;
+    }
+    60%{
+        top: 0px;
+        left: -400px;
+    }
+    
+    100%{
+        left: -400px;
+    }
+}
+
+@keyframes h-jump{
+    0%{
+        
+    }
+    
+    70%{
+        top: 0px;
+    }
+    75%{
+        top: -60px;
+    }
+    80%{
+        top: 0px;
+    }
+    85%{
+        top: -20px;
+    }
+    90%{
+        top: 0px;
+    }
+    95%{
+        top: -7px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes jump{
+    0%{
+        color: var(--text-color);
+    }
+    9%{
+        color: var(--text-color);
+    }
+    10%{
+        transform: rotateX(0deg);
+        box-shadow: 0  0 0px #000;
+        color: var(--main-color);
+    }
+    15{
+        transform: rotateX(180deg);
+        color:  var(--main-color);
+    }
+    20%{
+        
+        box-shadow: 0  0 20px #000;
+        transform: rotateX(360deg);
+        color:  var(--main-color);
+    }
+    25%{
+        transform: rotateX(180deg);
+        color:  var(--main-color);
+    }
+    30%{
+        transform:rotateX(0deg);
+        box-shadow: 0  0 0px #000;
+        color: var(--main-color);
+    }
+    31%{
+        color: var(--text-color);
+    }
+    40%{
+        color: var(--text-color);
+    }
+    100%{
+        
+    }
+}
+
+
+.wrapper{
+    position: relative;
+    transition-duration: 2s;
+}
+
+body{
+    margin: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    padding: 50px 0px;
+}
+header h1{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 200;
+    text-align: center;
+    font-size: 60px;
+    color:var(--main-color);
+    /*animation-name: h-jump;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 7s;*/
+}
+header h1 span{
+    
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-duration: 7s;
+    display: inline-block;
+    position: relative;
+}
+header h1 span:first-child{
+    animation-name: Online;
+}
+header h1 span:last-child{
+    animation-name: Pong;
+}
+nav{
+    text-align: center;
+}
+nav a{
+    font-family: 'Comfortaa';
+    font-weight: 800;
+    font-size: 35px;
+    display: inline-block;
+    background: var(--main-color);
+    border-radius: 50px;
+    padding: 15px;
+    color:var(--text-color);
+    margin: 30px;
+    text-decoration: none;
+    transition-duration: 0s;
+    top: 0px;
+    position: relative;
+    animation-delay: 0s;
+    animation-name: jump;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    animation-fill-mode:backwards;
+}
+nav a:nth-child(1) {
+    animation-delay: 5s;
+}
+nav a:nth-child(2){
+    animation-delay: 8s;
+}
+nav a:hover{
+    transform: scale(1.01);
+    box-shadow: 0  0 20px #000;
+    animation-name: none;
+    top: 0px;
+}
+
+
+@media (orientation:portrait) , (max-width:750px){
+    
+    header h1{
+        font-size: 8vw;
+        padding: 0px;
+        animation-name: none;
+    }
+    header h1 span{
+        animation: none;
+    }
+    header{
+        margin-top: 20px;
+        padding: 0px;
+    }
+    nav a{
+        font-size: 5vw;
+        display: block;
+        margin: 10px;
+        animation-name: none;
+    }
+    
+}

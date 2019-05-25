@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/download.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>
+            Скачать Online Pong
+        </title>
+        <meta name="theme-color" content="#000">
+        <link rel="stylesheet" href="css/background-animation.css">
+    </head>
+    <body>
+        <div class="background-animation">
+            <canvas></canvas>
+        </div>
+        <div class="wrapper">
+            <header>
+                <h1><span>Online</span> <span>Pong</span></h1>
+            </header>
+            <input type="checkbox" id="read">
+            <main>
+                <div class="download-button">
+                    <a href="#" download>Скачать <i class="fa fa-download" aria-hidden="true"></i></a>    
+                    <a href="index.html">Назад <i class="far fa-caret-square-left"></i></a>    
+                </div>
+                <div class="download-alert">
+                    <h2>Перед скачиванием</h2>
+                    <p>Убедитесь, что ваше устройство входить в список подходящих(см. ниже).
+                    Прочитайте лицензионное соглашение.</p>
+                    <p><a href="readme.txt" download>Читать лицензионное соглашение</a></p>
+                    <label for="read">Я прочитал лицензионное соглашение <span class="checkbox"></span></label>
+                </div>
+                <div class="download-alert">
+                    <h2>Важно!</h2>
+                    <p>Системные требования: актуальные версии Windows. Linux и MacOS - не поддерживаются.
+                    </p>
+                </div>
+            </main>
+            <footer>
+            <p>Игра разрабатывается группой учеников Московской Школы Программистов с 11.05.2019. Игра - 
+            <a href="https://github.com/IvanteaTeam/Online-Pong" class="vk-icon"></a></p>
+            </footer>
+        </div>
+        <div class="help">
+            <p>Чтобы скачать, подтвердите лицензионное соглашение.</p>
+        </div>
+        <script>
+            var  cb  = document.getElementsByTagName('input')[0];
+            var but = document.getElementsByClassName('download-button')[0].getElementsByTagName('a')[0];
+            
+            console.log(cb);
+            console.log(but);
+            
+            
+            window.onload = window.onresize = document.onmousemove = function(event){
+               var x = event.clientX,y = event.clientY;
+                //console.log(x+" "+y);
+                var bx = but.offsetLeft;
+                var by = but.offsetTop-window.scrollY;
+               // console.log(cb.checked);
+                var help = document.getElementsByClassName('help')[0];
+                if(!cb.checked&&x>=bx+15&&x<=bx+but.offsetWidth-15&&y>by+15&&y<by+but.offsetHeight-15){
+                    help.style.top = y-50+"px";
+                    help.style.left = x-50+"px";
+                }else{
+                    help.style.top = "-1000px";
+                }
+            }
+            document.onclick = function(event){
+                var x = event.clientX,y = event.clientY;
+                //console.log(x+" "+y);
+                var bx = but.offsetLeft;
+                var by = but.offsetTop-window.scrollY;
+               // console.log(cb.checked);
+                var help = document.getElementsByClassName('help')[0];
+                if(!cb.checked&&x>=bx+15&&x<=bx+but.offsetWidth-15&&y>by+15&&y<by+but.offsetHeight-15){
+                    alert("Чтобы скачать, подтвердите лицензионное соглашение.");
+                }else{
+                    help.style.top = "-1000px";
+                }
+            }
+        </script>
+        <script src="js/backgroung-animation.js"></script>
+    </body>
+</html>

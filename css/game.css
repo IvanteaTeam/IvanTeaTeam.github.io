@@ -1,0 +1,12 @@
+body main {
+    display: block!important;
+}
+
+.game_window {
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.game_window canvas {
+    display: inline-block;
+}

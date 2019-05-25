@@ -1,0 +1,78 @@
+main{
+    display: block;
+}
+ol{
+    padding: 0px;
+}
+.call{
+    padding: 20px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    text-align: left;
+    width: 600px;
+    margin: 20px auto;
+    border-radius: 20px;
+    list-style-position: inside;
+    
+    font-size: 25px;
+    font-family: 'Jura', sans-serif;
+    color: #222;
+}
+.call p{
+    font-size: 25px;
+    font-family: 'Jura', sans-serif;
+    text-align: left;
+    color: #222;
+    margin: 0px;
+    display: inline-block;
+}
+
+.add{
+    border: 2px solid #ddd;
+    text-align: center;
+    padding: 30px;
+    width: 600px;
+    margin: 0px auto;
+    border-radius: 20px;
+}
+.add h2{
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    color: #111;
+    margin: 10px;
+}
+.add input{
+    text-align: center;
+    font-family: 'Jura';
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    outline: none;
+    border: 1px solid #000;
+    margin: 10px;
+    font-size: 20px;
+}
+.add input:last-child{
+    background: #000;
+    color: #fff;
+    outline: none;
+    border: 1px solid #000;
+}
+
+@media (orientation:portrait) , (max-width:750px) {
+    ol{
+        padding: 0px;
+        margin: 0px;
+    }
+    .call{
+        border-radius: 0px;
+        width: 100%;
+        margin: 10px 0px;
+        font-size: 16px;
+        list-style: none;
+    }
+    .call p{
+        font-size: 16px;
+    }
+}

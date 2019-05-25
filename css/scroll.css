@@ -1,0 +1,19 @@
+.scroll-animation{
+                transition-duration: 0.5s;
+                transition-timing-function: ease-out;
+                position: relative;
+            }
+#showable{
+ opacity: 1;
+top:0px;
+            }
+    #no-showable{
+       top:200px;
+       opacity: 0;
+      }
+ @media (orientation:portrait) , (max-width:750px){
+        #showable,#no-showable{
+               opacity: 1;
+           top: 0px;
+           }
+     }
