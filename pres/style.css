@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background: #000;
+}
+
+.logo-text{
+    display: inline-block;
+}
+.logo{
+    background: #000; 
+    text-align: center;
+}
+.logo img{
+    height: 120px;
+    display: inline-block;
+}
+.logo-text p{
+    color: #fff;
+    display: inline-block;
+    font-family: 'Lucida Sans Unicode';
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.logo-text .left{
+    font-size: 120px;
+}
+.logo-text .right{
+    font-size: 80px;
+    position: relative;
+    right: 25px;
+}   
+
+p{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Lucida Sans Unicode';
+}
+
+.space{
+    height: 700px;
+}
+
+.why > div > p{
+    font-size: 250px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+.why > div > div{
+    display: inline-block;
+    text-align: left;
+}
+.why > div > div > p{
+    font-size: 80px;
+    margin: 0px;
+    padding: 0px;
+    height: 70px;
+    position: relative;
+    top: 10px;
+}
+
+.why > p{
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+.why{
+    text-align: center;
+}
+
+.why > div > div > p:last-child::after{
+    position: relative;
+    content: "\\";
+    right: 80px;
+}
+
+
+.images > p{
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.images > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.images > div > img{
+    width: 80%;
+    height: auto;   
+    display: inline-block;
+    padding: 10%;
+    margin: 10px 0px;
+}
